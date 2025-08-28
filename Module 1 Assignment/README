@@ -1,0 +1,24 @@
+# Simple Authentication & Role-Based Access Control Demo (Node.js)
+
+This project demonstrates the core ideas of **authentication**, **roles**, and **access control** in a very simple way.
+
+## How it works
+- Users are hardcoded in an object:
+  - `alice` → `admin`
+  - `bob` → `user`
+- On login, the script assigns a role based on the username.
+- Two "protected actions" exist:
+  - An **admin-only action**
+  - A **user-only action**
+- Access control logic ensures the right role can only perform the right action.
+
+## CIA Triad
+This demo highlights **Confidentiality**.  
+Confidentiality means restricting access so that only authorized users can perform specific actions.  
+- Admin actions are confidential to admins.  
+- User actions are confidential to users.  
+
+This prevents unauthorized access and protects sensitive operations.
+
+## Run
+node src/index.js
